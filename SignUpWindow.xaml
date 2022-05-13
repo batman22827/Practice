@@ -1,0 +1,34 @@
+﻿<Window x:Class="Practice.SignUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        Title="Регистрация в школе робототехники" Height="450" Width="800">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin="10,0,15,0" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20" Height="295">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="60" Color="DarkGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Регистрация" FontSize="22" FontWeight="Bold" Margin="0 0 0 20" ></TextBlock>
+
+
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Cursor="Arrow" FontSize="18" TextChanged="textBoxLoginTextChanged"></TextBox>
+                <PasswordBox x:Name="textBoxPassword" materialDesign:HintAssist.Hint="Введите пароль " Cursor="Arrow" FontSize="18" Style="{StaticResource MaterialDesignPasswordBox}" PasswordChanged="textBoxPasswordChanged"></PasswordBox>
+                <PasswordBox x:Name="textBoxPasswordRepeat" materialDesign:HintAssist.Hint="Введите пароль еще раз " Cursor="Arrow" FontSize="18" Style="{StaticResource MaterialDesignPasswordBox}" PasswordChanged="textBoxPasswordChanged"></PasswordBox>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Right" Content="Уже есть аккаунт" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Margin="0,-167,-8,167" Click="buttonСlickLogInUser" Cursor="Hand"/>
+                    <Button HorizontalAlignment="Left" Content="Зарегистрироваться" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Margin="2,49,0,-49" Click="buttonClickSignUpUser" Cursor="Hand" />
+                </Grid>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
+
+
+

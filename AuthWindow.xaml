@@ -1,0 +1,30 @@
+﻿<Window x:Class="Practice.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+           Title="Авторизация в школе робототехники" Height="600" Width="1000">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin="10,0,15,0" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20" Height="295">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="60" Color="DarkGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Авторизация" FontSize="22" FontWeight="Bold" Margin="0 0 0 20" ></TextBlock>
+
+
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Cursor="Arrow" FontSize="18" TextChanged="textBoxLoginTextChanged"></TextBox>
+                <PasswordBox x:Name="textBoxPassword" materialDesign:HintAssist.Hint="Введите пароль " Cursor="Arrow" FontSize="18" Style="{StaticResource MaterialDesignPasswordBox}" PasswordChanged="textBoxPasswordTextChanged"></PasswordBox>
+
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Войти в кабинет" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Margin="3,81,0,-81" Click="buttonClickLogInUser" Cursor="Hand"/>
+                    <Button HorizontalAlignment="Right" Content="Нет аккаунта" Style="{StaticResource MaterialDesignFlatDarkBgButton}" Margin="0,-104,16,104" Click="buttonClickSignUpUser" Cursor="Hand" />
+                </Grid>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
