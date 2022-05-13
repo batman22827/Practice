@@ -14,7 +14,7 @@ namespace Practice
 
         public MainViewModel()
         {
-            var dir = Directory.GetFiles("F:\\Images", "*.png");
+            var dir = Directory.GetFiles("Images", "*.png");
             foreach (var file in dir)
             {
                 var fileInfo = new FileInfo(file);
